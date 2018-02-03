@@ -1,7 +1,8 @@
-#! /usr/bin/python3
+#! /usr/bin/python
 """
-Small script utilizing the lxml python library in order to quickly get the xpath of any element 
+A very handy small script utilizing the lxml python library in order to quickly get the xpath of any element 
 in an xml tree
+Will save you a lot of precious time when you are inheriting Odoo modules, As xml views inheritance heavily depends on xpath insertion.
 
 usage: create 'xml_file.xml' file in the same directory and paste the xml tree
 put a tag <here/> in the  place you wish to get the xpath
@@ -20,9 +21,9 @@ def iterate_tree(xml_tree):
     for i in xml_tree.iter():
         path = i.getroottree().getpath(i)
         if 'here' in path:
-            cprint(path,'white','on_red')
+            cprint('/'+path,'white','on_red')
         else:
-            print path
+            print '/'+path
 
 with open('xml_file.xml','r') as f:
     xml_string = f.read()
