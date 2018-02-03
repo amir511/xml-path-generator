@@ -3,9 +3,9 @@
 Small script utilizing the lxml python library in order to quickly get the xpath of any element 
 in an xml tree
 
-usage: open the xml_file.xml file and paste the xml tree
+usage: create 'xml_file.xml' file in the same directory and paste the xml tree
 put a tag <here/> in the  place you wish to get the xpath
-run the script, you will notice the here tag is highlighted in red
+run the script, you will notice the here tag xpath is highlighted in red
 author: amir anwar 30/10/2017
 """
 from lxml import etree
