@@ -23,7 +23,7 @@ def iterate_tree(xml_tree):
         if 'here' in path:
             cprint('/'+path,'white','on_red')
         else:
-            print '/'+path
+            print('/'+path)
 
 with open('xml_file.xml','r') as f:
     xml_string = f.read()
